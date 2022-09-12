@@ -36,6 +36,8 @@ You need a Civo account in order to create a Civo Kubernetes cluster. If you don
 
 3. Create the cluster using the command `civo kubernetes create workshop-cluster --size "g4s.kube.medium" --nodes 2 --wait --save --merge --region FRA1 --switch -r Traefik-v2-nodeport`
 
+> Did you notice how fast that was? 🔥
+
 ### Set Up Knative
 
 I've prepared a couple of bash scripts that you can use to install and configure Knative in your cluster. Open your terminal and run the following commands:
