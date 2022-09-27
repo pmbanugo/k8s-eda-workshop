@@ -14,6 +14,7 @@ You would need the following tools installed in order to code along in the works
 - Node.js [v18.x](https://nodejs.org/en/download/current/) and above.
 - A Kubernetes cluster.
 - [Knative](https://knative.dev/docs/install/yaml-install/serving/install-serving-with-yaml/) installed and configured on your k8s cluster.
+- The **kn** and **func** CLI to interact with Knative from the terminal.
 
 Follow the instruction in the [Node.js](https://nodejs.org/en/download/current/) installation page to install Node.js. I provide set up instructions for setting up Kubernetes and Knative below.
 
@@ -47,3 +48,15 @@ I've prepared a couple of bash scripts that you can use to install and configure
 2. Install and configure Contour as the networking layer using the command `curl -sL https://raw.githubusercontent.com/pmbanugo/k8s-eda-workshop/main/scripts/02-contour.sh | sh`.
 
 3. Configure additional extensions such as automatic TLS provisioning for Knative services `curl -sL https://raw.githubusercontent.com/pmbanugo/k8s-eda-workshop/main/scripts/03-serving-extensions.sh | sh`
+
+## Install _kn_ and _func_ CLIs
+
+The _kn_ CLI provides a quick and easy interface for creating Knative resources such as services and event sources, without the need to create or modify YAML files directly. It also simplifies completion of otherwise complex procedures such as autoscaling and traffic splitting. _func_ on the other hand is used to create, build, manage and deploy functions.
+
+Run the commands below to install both kn and func.
+
+```bash
+brew tap knative-sandbox/kn-plugins
+brew install knative/client/kn
+brew install func
+```
