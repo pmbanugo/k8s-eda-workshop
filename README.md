@@ -13,7 +13,7 @@ Workshop guide for "building event-driven serverless functions in Kubernetes"
 Here you will links to documentation and tools that are used in the workshop.
 
 - Tutorial: [Understanding monorepo and tools for managing monorepos](https://monorepo.tools/).
-- [Nx](https://nx.dev/): Next generation build system with first class monorepo support and powerful integrations.
+- [Nx](https://nx.dev/): Next generation build system with first-class monorepo support and powerful integrations.
   - [Configuring CI for Nx workspaces](https://nx.dev/recipes/ci-setup#configuring-ci-for-nx-workspaces)
 - Knative getting started [tutorial](https://knative.dev/docs/getting-started/)
 - _kn_ [docs](https://github.com/knative/client/blob/release-1.7/docs/cmd/kn.md)
