@@ -7,9 +7,9 @@ This workshop guide is designed for learning _how to build event-driven, serverl
 - Basic familiarity with Kubernetes.
 - Basic knowledge of JavaScript (because the examples are in JavaScript).
 
-JavaScript knowledge is not strictly required because the code snippet will be briefly explained, and the concept can be applied to other popular programming languages. The last section of the workshop, you'd get to build something from your imagination and use whatever programming language you prefer.
+JavaScript knowledge is not strictly required because the code snippet will be briefly explained, and the concept can be applied to other popular programming languages. In the last section of the workshop, you'd get to build something from your imagination and use whatever programming language you prefer.
 
-You would need the following tools installed in order to code along in the workshop.
+You would need the following tools installed to code along in the workshop.
 
 - Node.js [v18.x](https://nodejs.org/en/download/current/) and above.
 - A Kubernetes cluster.
@@ -17,11 +17,11 @@ You would need the following tools installed in order to code along in the works
 - The **kn** and **func** CLI to interact with Knative from the terminal.
 - Docker (logged in to your container registry e.g Docker Hub).
 
-Follow the instruction in the [Node.js](https://nodejs.org/en/download/current/) installation page to install Node.js. I provide set up instructions for setting up Kubernetes and Knative below.
+Follow the instruction in the [Node.js](https://nodejs.org/en/download/current/) installation page to install Node.js. I provided set-up instructions for setting up Kubernetes and Knative below.
 
 ## Set Up A Kubernetes Cluster
 
-You can use a local cluster using Kind, Docker Desktop, or Rancher Desktop. For this workshop, I'll provide instructions for working with Kubernetes on [Civo](civo.com) Cloud. In order to follow the set up instructions, pls make sure you have the following CLI tools installed:
+You can use a local cluster using Kind, Docker Desktop, or Rancher Desktop. For this workshop, I'll provide instructions for working with Kubernetes on [Civo](civo.com) Cloud. To follow the set-up instructions, pls make sure you have the following CLI tools installed:
 
 - [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 - [Civo CLI](https://github.com/civo/cli#set-up)
@@ -30,9 +30,9 @@ You can use a local cluster using Kind, Docker Desktop, or Rancher Desktop. For 
 
 ### Set Up A Civo Cluster
 
-You need a Civo account in order to create a Civo Kubernetes cluster. If you don't have one, go to [dashboard.civo.com/signup](https://dashboard.civo.com/signup). After you're registered, follow the instruction below to set up the CLI and create a k8s cluster.
+You need a Civo account to create a Civo Kubernetes cluster. If you don't have one, go to [dashboard.civo.com/signup](https://dashboard.civo.com/signup). After you're registered, follow the instruction below to set up the CLI and create a k8s cluster.
 
-1. Add your API Key to the Civo CLI using the command `civo apikey save <Name for your API Key> <API key>`. You can find your API key on Civo dasboard by going to [**Account > Settings > Security**](https://dashboard.civo.com/security).
+1. Add your API Key to the Civo CLI using the command `civo apikey save <Name for your API Key> <API key>`. You can find your API key on Civo dashboard by going to [**Account > Settings > Security**](https://dashboard.civo.com/security).
 
 2. Ensure that the Civo CLI is using the correct API key by running the command `civo apikey current <Name for your API Key>`.
 
@@ -52,7 +52,7 @@ I've prepared a couple of bash scripts that you can use to install and configure
 
 ## Install _kn_ and _func_ CLIs
 
-The _kn_ CLI provides a quick and easy interface for creating Knative resources such as services and event sources, without the need to create or modify YAML files directly. It also simplifies completion of otherwise complex procedures such as autoscaling and traffic splitting. _func_ on the other hand is used to create, build, manage and deploy functions.
+The _kn_ CLI provides a quick and easy interface for creating Knative resources such as services and event sources, without the need to create or modify YAML files directly. It also simplifies the completion of otherwise complex procedures such as autoscaling and traffic splitting. _func_ on the other hand is used to create, build, manage and deploy functions.
 
 Run the commands below to install both kn and func.
 
