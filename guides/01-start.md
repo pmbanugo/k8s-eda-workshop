@@ -15,6 +15,7 @@ You would need the following tools installed in order to code along in the works
 - A Kubernetes cluster.
 - [Knative](https://knative.dev/docs/install/yaml-install/serving/install-serving-with-yaml/) installed and configured on your k8s cluster.
 - The **kn** and **func** CLI to interact with Knative from the terminal.
+- Docker (logged in to your container registry e.g Docker Hub).
 
 Follow the instruction in the [Node.js](https://nodejs.org/en/download/current/) installation page to install Node.js. I provide set up instructions for setting up Kubernetes and Knative below.
 
