@@ -15,20 +15,32 @@ You would need the following tools installed to code along in the workshop.
 - A Kubernetes cluster.
 - [Knative](https://knative.dev/docs/install/yaml-install/serving/install-serving-with-yaml/) installed and configured on your k8s cluster.
 - The **kn** and **func** CLI to interact with Knative from the terminal.
-- Docker (logged in to your container registry e.g Docker Hub).
+- Docker: Either as via Docker Desktop or Rancher Desktop. Make sure to be logged in to your container registry e.g Docker Hub.
 
 Follow the instruction in the [Node.js](https://nodejs.org/en/download/current/) installation page to install Node.js. I provided set-up instructions for setting up Kubernetes and Knative below.
 
 ## Set Up A Kubernetes Cluster
 
-You can use a local cluster using Kind, Docker Desktop, or Rancher Desktop. For this workshop, I'll provide instructions for working with Kubernetes on [Civo](civo.com) Cloud. To follow the set-up instructions, pls make sure you have the following CLI tools installed:
+You can use a local cluster using Kind, Docker Desktop, or Rancher Desktop. For this workshop, I'll provide instructions for working with Kubernetes on [Civo](civo.com) Cloud, and point you to a different resource where you can find instructions to set up locally.
+
+### Set Up Local Cluster With Knative
+
+You can also use a local cluster using minikube, [Kind](https://kind.sigs.k8s.io/), or Docker Desktop.
+
+For kind, follow the instructions at [konk.dev](https://github.com/csantanapr/knative-kind). Actually it's just a single command `curl -sL get.konk.dev | bash` that will do it for you.
+
+For minikube, follow the instructions at [github.com/csantanapr/knative-minikube](https://github.com/csantanapr/knative-minikube).
+
+For Docker Desktop, follow the instructions at [github.com/csantanapr/knative-docker-desktop](https://github.com/csantanapr/knative-docker-desktop)
+
+### Set Up A Civo Kubernetes Cluster With Knative
+
+To follow these set-up instructions, pls make sure you have the following CLI tools installed:
 
 - [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 - [Civo CLI](https://github.com/civo/cli#set-up)
 
 > The links should take you to the installation page.
-
-### Set Up A Civo Cluster
 
 You need a Civo account to create a Civo Kubernetes cluster. If you don't have one, go to [dashboard.civo.com/signup](https://dashboard.civo.com/signup). After you're registered, follow the instruction below to set up the CLI and create a k8s cluster.
 
@@ -40,7 +52,7 @@ You need a Civo account to create a Civo Kubernetes cluster. If you don't have o
 
 > Did you notice how fast that was? 🔥
 
-### Set Up Knative
+#### Set Up Knative On Civo Cloud
 
 I've prepared a couple of bash scripts that you can use to install and configure Knative in your cluster. Open your terminal and run the following commands:
 
