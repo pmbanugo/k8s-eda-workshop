@@ -35,6 +35,8 @@ For Docker Desktop, follow the instructions at [github.com/csantanapr/knative-do
 
 ### Set Up A Civo Kubernetes Cluster With Knative
 
+Civo cloud gives new users free $250 credit for a month. All you need to do is register and put a Credit/Debit card and wait a few minutes for your account to be activated. You can delete your account or the cluster after the workshop.
+
 To follow these set-up instructions, pls make sure you have the following CLI tools installed:
 
 - [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
