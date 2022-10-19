@@ -3,7 +3,7 @@
 set -eo pipefail
 set -u
 
-KNATIVE_NET_CONTOUR_VERSION=${KNATIVE_NET_CONTOUR_VERSION:-1.7.0}
+KNATIVE_NET_CONTOUR_VERSION=${KNATIVE_NET_CONTOUR_VERSION:-1.8.0}
 
 ## INSTALL CONTOUR
 n=0
@@ -34,5 +34,5 @@ kubectl patch configmap/config-network \
 
 # Configure DNS with sslip.io
 
-kubectl apply -f https://github.com/knative/serving/releases/download/knative-v1.7.1/serving-default-domain.yaml
+kubectl apply -f https://github.com/knative/serving/releases/download/knative-v1.8.0/serving-default-domain.yaml
 

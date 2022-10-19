@@ -3,7 +3,7 @@
 set -eo pipefail
 set -u
 
-KNATIVE_VERSION=${KNATIVE_VERSION:-1.7.1}
+KNATIVE_VERSION=${KNATIVE_VERSION:-1.8.0}
 
 n=0
 set +e
