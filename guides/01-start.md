@@ -64,6 +64,9 @@ I've prepared a couple of bash scripts that you can use to install and configure
 
 3. Configure additional extensions such as automatic TLS provisioning for Knative services `curl -sL https://raw.githubusercontent.com/pmbanugo/k8s-eda-workshop/main/scripts/03-serving-extensions.sh | sh`
 
+> If you prefer Istio, you should replace the command in step 2 with the following:
+> `curl -sL https://raw.githubusercontent.com/pmbanugo/k8s-eda-workshop/main/scripts/02-istio.sh | sh`
+
 ## Install _kn_ and _func_ CLIs
 
 The _kn_ CLI provides a quick and easy interface for creating Knative resources such as services and event sources, without the need to create or modify YAML files directly. It also simplifies the completion of otherwise complex procedures such as autoscaling and traffic splitting. _func_ on the other hand is used to create, build, manage and deploy functions.
