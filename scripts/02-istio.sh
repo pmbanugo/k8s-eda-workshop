@@ -3,25 +3,18 @@
 set -eo pipefail
 set -u
 
-KNATIVE_NET_ISTIO_VERSION=${KNATIVE_NET_ISTIO_VERSION:-1.8.0}
-
-kubectl apply -l knative.dev/crd-install=true -f https://github.com/knative/net-istio/releases/download/knative-v${KNATIVE_NET_ISTIO_VERSION}/istio.yaml
-
-
 ## INSTALL Istio
-n=0
-until [ $n -ge 2 ]; do
-  kubectl apply -f https://github.com/knative/net-istio/releases/download/knative-v${KNATIVE_NET_ISTIO_VERSION}/istio.yaml > /dev/null && break
-  n=$[$n+1]
-  sleep 5
-done
+kubectl apply -l knative.dev/crd-install=true -f istio.yaml
+kubectl apply -f istio.yaml
+
+
 kubectl wait --for=condition=Established --all crd > /dev/null
 kubectl wait pod --timeout=-1s --for=condition=Ready -l '!job-name' -n istio-system > /dev/null
 
 ## INSTALL NET Istio Controller
 n=0
 until [ $n -ge 2 ]; do
-  kubectl apply -f https://github.com/knative/net-istio/releases/download/knative-v${KNATIVE_NET_ISTIO_VERSION}/net-istio.yaml > /dev/null && break
+  kubectl apply -f https://github.com/knative/net-istio/releases/download/knative-v1.8.0/net-istio.yaml > /dev/null && break
   n=$[$n+1]
   sleep 5
 done
