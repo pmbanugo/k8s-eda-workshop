@@ -8328,7 +8328,7 @@ metadata:
   name: istio-ingressgateway
   namespace: istio-system
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: istio-ingressgateway
